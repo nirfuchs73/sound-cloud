@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Search from '../../components/Search/Search';
 
-const search = (props) => (
-  <div>
-    <h1>The Search Page</h1>
-    <Search />
-  </div>
-);
+class SearchPage extends Component {
+  state = {
+  }
 
-export default search;
+  searchClicked = () => {
+    console.log('SearchClicked');
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>The Search Page</h1>
+        <Search searchClicked={this.searchClicked} />
+      </div>
+    );
+  }
+}
+
+export default SearchPage;

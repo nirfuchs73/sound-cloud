@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const history = (props) => (
-  <div>
-    <h1>The History Page</h1>
-  </div>
-);
+class HistoryPage extends Component {
+  render() {
+    return (
+      <div>
+        <h1>The History Page</h1>
+      </div>
+    );
+  }
+}
 
-export default history;
+
+
+export default HistoryPage;
