@@ -1,9 +1,9 @@
 import React from 'react';
-import { Route, Switch, NavLink, Redirect } from 'react-router-dom';
+import { Route, Switch, NavLink } from 'react-router-dom';
 // import './App.css';
-import Search from './containers/Search/Search';
-import Play from './containers/Play/Play';
-import History from './containers/History/History';
+import SearchPage from './containers/SearchPage/SearchPage';
+import PlayPage from './containers/PlayPage/PlayPage';
+import HistoryPage from './containers/HistoryPage/HistoryPage';
 
 function App() {
   return (
@@ -14,9 +14,9 @@ function App() {
         <NavLink to="/history">History</NavLink>
       </nav>
       <Switch>
-        <Route path="/search" component={Search} />
-        <Route path="/play" component={Play} />
-        <Route path="/history" component={History} />
+        <Route path="/search" component={SearchPage} />
+        <Route path="/play" component={PlayPage} />
+        <Route path="/history" component={HistoryPage} />
         <Route render={() => <h1>404 Error - Page Not found</h1>} />
         {/* <Redirect from="/" to="/search" /> */}
       </Switch>
