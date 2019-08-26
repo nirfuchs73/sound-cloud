@@ -5,6 +5,7 @@ import SCService from '../../services/SCService';
 
 import {
   setSearch,
+  setHistory,
 } from '../../store/actions';
 
 
@@ -24,6 +25,7 @@ class SearchPage extends Component {
   searchClicked = () => {
     console.log('SearchClicked');
     // SCService.query(this.state.search)
+    this.props.setHistory(this.props.search);
     SCService.query(this.props.search)
       .then(function (tracks) {
         const results = tracks.slice(0, 6);
@@ -36,6 +38,7 @@ class SearchPage extends Component {
       <div>
         <h1>The Search Page</h1>
         <Search
+          search={this.props.search}
           searchChange={this.searchChange}
           searchClicked={this.searchClicked} />
       </div>
@@ -44,15 +47,17 @@ class SearchPage extends Component {
 }
 
 const mapStateToProps = (state) => {
-  // console.log('mapStateToProps', state);
+  console.log('mapStateToProps', state);
   return {
     search: state.search,
+    history: state.history,
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
     setSearch: (value) => { dispatch(setSearch(value)) },
+    setHistory: (value) => { dispatch(setHistory(value)) },
   }
 }
 
