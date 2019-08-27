@@ -8,11 +8,19 @@ import {
 } from '../../store/actions';
 
 class HistoryPage extends Component {
+
+  historyItemClicked = (search) => {
+    console.log('historyItemClicked');
+    this.props.setSearch(search);
+  }
+
   render() {
     return (
       <div>
         <h1>Search History</h1>
-        <HistoryList history={this.props.history} />
+        <HistoryList
+          history={this.props.history}
+          historyItemClicked={this.historyItemClicked} />
       </div>
     );
   }

@@ -15,16 +15,19 @@ import {
 
 class SearchPage extends Component {
   state = {
-    // search: ''
+    // search: '',
     // tracks: [],
     page: 0,
     tracksToDisplay: [],
   }
 
   componentDidMount() {
-    var index = this.state.page * 6;
-    const results = this.props.tracks.slice(index, index + 6);
-    this.setState({ tracksToDisplay: results });
+    if (this.props.search) {
+      this.searchClicked();
+      var index = this.state.page * 6;
+      const results = this.props.tracks.slice(index, index + 6);
+      this.setState({ tracksToDisplay: results });
+    }
   }
 
   searchChange = (event) => {
@@ -92,7 +95,7 @@ class SearchPage extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log('mapStateToProps', state);
+  // console.log('mapStateToProps', state);
   return {
     search: state.search,
     history: state.history,

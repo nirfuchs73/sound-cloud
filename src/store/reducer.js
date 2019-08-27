@@ -22,8 +22,10 @@ const reducer = (state = INITIAL_STATE, action) => {
 
     case SET_HISTORY:
       var history = [...state.history];
-      if (history.length === 5) history.shift();
-      history.push(action.value);
+      if (!history.includes(action.value)) {
+        if (history.length === 5) history.shift();
+        history.push(action.value);
+      }
       // return Object.assign({}, state, { history: [...state.history, action.value] });
       return Object.assign({}, state, { history: history });
 

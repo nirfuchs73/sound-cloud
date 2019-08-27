@@ -10,9 +10,7 @@ const historyList = (props) => {
         <HistoryItem
           // key={idx}
           title={historyItem}
-          // historyItemClicked={() => props.historyItemClicked(result.id)}
-          historyItemClicked={props.historyItemClicked}
-        />
+          historyItemClicked={() => props.historyItemClicked(historyItem)} />
       </Link>
     );
   });
