@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.02d07387.chunk.css",
-    "main.js": "/static/js/main.ae1fa7c1.chunk.js",
-    "main.js.map": "/static/js/main.ae1fa7c1.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.2739bb68.js",
-    "runtime~main.js.map": "/static/js/runtime~main.2739bb68.js.map",
-    "static/js/2.03c8660b.chunk.js": "/static/js/2.03c8660b.chunk.js",
-    "static/js/2.03c8660b.chunk.js.map": "/static/js/2.03c8660b.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.bea0f3d1e078a8cff148df1fc965d630.js": "/precache-manifest.bea0f3d1e078a8cff148df1fc965d630.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.02d07387.chunk.css.map": "/static/css/main.02d07387.chunk.css.map"
+    "main.css": "/sound-cloud/static/css/main.02d07387.chunk.css",
+    "main.js": "/sound-cloud/static/js/main.0bdea2dd.chunk.js",
+    "main.js.map": "/sound-cloud/static/js/main.0bdea2dd.chunk.js.map",
+    "runtime~main.js": "/sound-cloud/static/js/runtime~main.08035307.js",
+    "runtime~main.js.map": "/sound-cloud/static/js/runtime~main.08035307.js.map",
+    "static/js/2.03c8660b.chunk.js": "/sound-cloud/static/js/2.03c8660b.chunk.js",
+    "static/js/2.03c8660b.chunk.js.map": "/sound-cloud/static/js/2.03c8660b.chunk.js.map",
+    "index.html": "/sound-cloud/index.html",
+    "precache-manifest.db2f0046f033658b4218cb102e95d19b.js": "/sound-cloud/precache-manifest.db2f0046f033658b4218cb102e95d19b.js",
+    "service-worker.js": "/sound-cloud/service-worker.js",
+    "static/css/main.02d07387.chunk.css.map": "/sound-cloud/static/css/main.02d07387.chunk.css.map"
   }
 }
