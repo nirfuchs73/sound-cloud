@@ -1,18 +1,13 @@
 import React from 'react';
 
+import classes from './Result.module.css';
 
 const result = (props) => {
   return (
-    <div onClick={props.resultClicked}>
-      <p>{props.title}</p>
+    <div className={classes.Result} onClick={props.resultClicked}>
+      <div>{props.title}</div>
     </div>
   );
-  // <article className="Post" onClick={props.clicked}>
-  //     <h1>{props.title}</h1>
-  //     <div className="Info">
-  //         <div className="Author">{props.author}</div>
-  //     </div>
-  // </article>
 }
 
 export default result;

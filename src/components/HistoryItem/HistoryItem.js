@@ -1,9 +1,11 @@
 import React from 'react';
 
+import classes from './HistoryItem.module.css';
+
 const historyItem = (props) => {
   return (
-    <div onClick={props.historyItemClicked}>
-      <p>{props.title}</p>
+    <div className={classes.HistoryItem} onClick={props.historyItemClicked}>
+      <div>{props.title}</div>
     </div>
   );
 }
