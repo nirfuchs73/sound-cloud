@@ -4,6 +4,8 @@ import SCService from '../../services/SCService';
 import Search from '../../components/Search/Search';
 import Results from '../../components/Results/Results';
 
+import classes from './SearchPage.module.css';
+
 import {
   setSearch,
   setHistory,
@@ -77,8 +79,8 @@ class SearchPage extends Component {
 
   render() {
     return (
-      <div>
-        <h1>The Search Page</h1>
+      <div className={classes.Wrapper}>
+        <h2 style={{ marginLeft: '10px' }}>Search for Tracks</h2>
         <Search
           search={this.props.search}
           searchChange={this.searchChange}
@@ -88,7 +90,7 @@ class SearchPage extends Component {
           tracksToDisplay={this.state.tracksToDisplay}
           resultClicked={this.resultClicked}
         />
-        <button onClick={this.nextClicked}>Next</button>
+        <button className={classes.NextBtn} onClick={this.nextClicked}>Next</button>
       </div>
     );
   }

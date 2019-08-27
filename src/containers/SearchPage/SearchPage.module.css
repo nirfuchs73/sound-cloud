@@ -1,0 +1,13 @@
+.NextBtn {
+  position: absolute;
+  bottom: 0;
+  margin: 10px;
+}
+
+.Wrapper {
+  max-width: 900px;
+  padding: 0 20px;
+  margin: 0 auto;
+  background-color: aquamarine;
+  height: 100vh;
+}

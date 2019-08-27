@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import classes from './Results.module.css';
+
 import Result from '../Result/Result';
 
 const results = (props) => {
@@ -17,7 +19,7 @@ const results = (props) => {
   });
 
   return (
-    <div>
+    <div className={classes.Results}>
       {results}
     </div>
   );

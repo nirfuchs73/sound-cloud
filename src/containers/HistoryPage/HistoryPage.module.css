@@ -1,0 +1,7 @@
+.Wrapper {
+  max-width: 900px;
+  padding: 0 20px;
+  margin: 0 auto;
+  background-color: lightgreen;
+  height: 100vh;
+}

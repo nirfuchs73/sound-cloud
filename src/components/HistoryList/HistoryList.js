@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 import HistoryItem from '../HistoryItem/HistoryItem';
 
+import classes from './HistoryList.module.css';
+
 const historyList = (props) => {
   let historyList = props.history.map((historyItem, idx) => {
     return (
@@ -15,7 +17,7 @@ const historyList = (props) => {
     );
   });
   return (
-    <div>
+    <div className={classes.HistoryList}>
       {historyList}
     </div>
   );

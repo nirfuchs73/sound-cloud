@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import HistoryList from '../../components/HistoryList/HistoryList';
+import classes from './HistoryPage.module.css';
 
 import {
   setSearch,
@@ -16,8 +17,8 @@ class HistoryPage extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Search History</h1>
+      <div className={classes.Wrapper}>
+        <h2 style={{ marginLeft: '10px' }}>Search History</h2>
         <HistoryList
           history={this.props.history}
           historyItemClicked={this.historyItemClicked} />
