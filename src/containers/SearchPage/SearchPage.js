@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Search from '../../components/Search/Search';
 import { connect } from 'react-redux';
 import SCService from '../../services/SCService';
+import Search from '../../components/Search/Search';
+import Results from '../../components/Results/Results';
 
 import {
   setSearch,
@@ -15,6 +16,7 @@ class SearchPage extends Component {
     // search: ''
     tracks: [],
     page: 0,
+    tracksToDisplay: [],
   }
 
   searchChange = (event) => {
@@ -31,7 +33,9 @@ class SearchPage extends Component {
       // console.log(this.state.page)
       var index = this.state.page * 6;
       const results = this.state.tracks.slice(index, index + 6);
-      console.log(results);
+      this.setState({ tracksToDisplay: results }, () => {
+        // console.log(this.state.tracksToDisplay);
+      });
     });
     // console.log(this.props.page);
     // this.props.setPage();
@@ -45,9 +49,10 @@ class SearchPage extends Component {
       .then(tracks => {
         this.setState({ tracks: tracks }, () => {
           var index = this.state.page * 6;
-          // const results = tracks.slice(0, 6);
           const results = this.state.tracks.slice(index, index + 6);
-          console.log(results);
+          this.setState({ tracksToDisplay: results }, () => {
+            // console.log(this.state.tracksToDisplay);
+          });
         });
         // console.log(results[0].stream_url);
         // SCService.play('http://soundcloud.com/forss/flickermood');
@@ -63,13 +68,16 @@ class SearchPage extends Component {
           searchChange={this.searchChange}
           searchClicked={this.searchClicked}
           nextClicked={this.nextClicked} />
+        <Results tracksToDisplay={this.state.tracksToDisplay} />
+        {/* <iframe width="100%" height="166" scrolling="no" title="175288206" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/175288206&amp;color=0066cc"></iframe> */}
+        <button onClick={this.nextClicked}>Next</button>
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => {
-  console.log('mapStateToProps', state);
+  // console.log('mapStateToProps', state);
   return {
     search: state.search,
     history: state.history,
