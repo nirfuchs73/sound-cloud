@@ -9,3 +9,7 @@
 .SearchBtn {
   margin-left: 5px;
 }
+
+.SearchBtn:hover {
+  cursor: pointer;
+}
