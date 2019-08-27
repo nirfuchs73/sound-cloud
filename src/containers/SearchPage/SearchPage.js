@@ -26,16 +26,20 @@ class SearchPage extends Component {
   componentDidMount() {
     if (this.props.search) {
       this.searchClicked();
-      var index = this.state.page * 6;
-      const results = this.props.tracks.slice(index, index + 6);
-      this.setState({ tracksToDisplay: results });
+    } else {
+      this.setTracksToDisplay();
     }
   }
 
+  setTracksToDisplay = () => {
+    var index = this.state.page * 6;
+    const results = this.props.tracks.slice(index, index + 6);
+    this.setState({ tracksToDisplay: results }, () => {
+      // console.log(this.state.tracksToDisplay);
+    });
+  }
+
   searchChange = (event) => {
-    // this.setState({ search: event.target.value }, () => {
-    //   console.log(this.state.search);
-    // });
     this.props.setSearch(event.target.value);
   }
 
@@ -43,33 +47,17 @@ class SearchPage extends Component {
     this.setState((prevState) => {
       return { page: prevState.page + 1 }
     }, () => {
-      // console.log(this.state.page)
-      var index = this.state.page * 6;
-      // const results = this.state.tracks.slice(index, index + 6);
-      const results = this.props.tracks.slice(index, index + 6);
-      this.setState({ tracksToDisplay: results }, () => {
-        // console.log(this.state.tracksToDisplay);
-      });
+      this.setTracksToDisplay();
     });
-    // console.log(this.props.page);
-    // this.props.setPage();
   }
 
   searchClicked = () => {
     console.log('SearchClicked');
-    // SCService.query(this.state.search)
     this.props.setHistory(this.props.search);
     SCService.query(this.props.search)
       .then(tracks => {
         this.props.setTracks(tracks);
-        // this.setState({ tracks: tracks }, () => {
-        var index = this.state.page * 6;
-        // const results = this.state.tracks.slice(index, index + 6);
-        const results = this.props.tracks.slice(index, index + 6);
-        this.setState({ tracksToDisplay: results }, () => {
-          // console.log(this.state.tracksToDisplay);
-        });
-        // });
+        this.setTracksToDisplay();
       });
   }
 
