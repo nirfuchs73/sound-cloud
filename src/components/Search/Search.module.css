@@ -4,10 +4,13 @@
 
 .SearchInput {
   margin-left: 10px;
+  height: 25px;
 }
 
 .SearchBtn {
-  margin-left: 5px;
+  margin-left: 10px;
+  height: 31px;
+  width: 50px;
 }
 
 .SearchBtn:hover {
