@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch, NavLink } from 'react-router-dom';
 // import './App.css';
+import classes from './App.module.css';
 import store from './store';
 import SearchPage from './containers/SearchPage/SearchPage';
 import PlayPage from './containers/PlayPage/PlayPage';
@@ -8,8 +9,8 @@ import HistoryPage from './containers/HistoryPage/HistoryPage';
 
 function App() {
   return (
-    <div className="App">
-      <nav>
+    <div className={classes.App}>
+      <nav className={classes.Nav}>
         <NavLink to="/search">Search</NavLink> |&nbsp;
         <NavLink to="/play">Play</NavLink> |&nbsp;
         <NavLink to="/history">History</NavLink>

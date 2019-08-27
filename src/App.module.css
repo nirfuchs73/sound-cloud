@@ -1,0 +1,13 @@
+.App {
+  background-color: antiquewhite;
+}
+
+.Nav {
+  text-align: center;
+  text-decoration: none;
+}
+
+.Nav a:hover, .Nav a:active, .Nav a.active {
+  color: #fa923f;
+  text-decoration: underline;
+}
