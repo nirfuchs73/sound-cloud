@@ -1,6 +1,7 @@
 import {
   SET_SEARCH,
   SET_HISTORY,
+  // SET_PAGE,
 } from './constants';
 
 export function setSearch(value) {
@@ -16,3 +17,9 @@ export function setHistory(value) {
     value
   }
 }
+
+// export function setPage() {
+//   return {
+//     type: SET_PAGE,
+//   }
+// }

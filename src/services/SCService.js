@@ -8,6 +8,13 @@ function query(search) {
   return SC.get('/tracks', { q: search });
 }
 
+function play(track_url) {
+  SC.oEmbed(track_url, { auto_play: true }).then(function (oEmbed) {
+    console.log('oEmbed response: ', oEmbed);
+  });
+}
+
 export default {
   query,
+  play,
 }

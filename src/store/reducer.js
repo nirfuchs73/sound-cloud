@@ -1,11 +1,13 @@
 import {
   SET_SEARCH,
   SET_HISTORY,
+  // SET_PAGE,
 } from './constants';
 
 const INITIAL_STATE = {
   search: '',
   history: [],
+  // page: 0,
 }
 
 const reducer = (state = INITIAL_STATE, action) => {
@@ -13,12 +15,17 @@ const reducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case SET_SEARCH:
       return Object.assign({}, state, { search: action.value });
+
     case SET_HISTORY:
-      var history = state.history;
+      var history = [...state.history];
       if (history.length === 5) history.shift();
       history.push(action.value);
       // return Object.assign({}, state, { history: [...state.history, action.value] });
       return Object.assign({}, state, { history: history });
+
+    // case SET_PAGE:
+    //   return Object.assign({}, state, { page: state.page + 1 });
+
     default:
       return state;
   }

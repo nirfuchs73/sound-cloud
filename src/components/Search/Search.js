@@ -7,6 +7,9 @@ const search = (props) => (
       onChange={props.searchChange}
       placeholder="Search tracks..." />
     <button onClick={props.searchClicked}>Go</button>
+    <div>
+      <button onClick={props.nextClicked}>Next</button>
+    </div>
   </div>
 );
 

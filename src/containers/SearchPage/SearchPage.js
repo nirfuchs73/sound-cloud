@@ -6,12 +6,15 @@ import SCService from '../../services/SCService';
 import {
   setSearch,
   setHistory,
+  // setPage,
 } from '../../store/actions';
 
 
 class SearchPage extends Component {
   state = {
     // search: ''
+    tracks: [],
+    page: 0,
   }
 
   searchChange = (event) => {
@@ -19,7 +22,19 @@ class SearchPage extends Component {
     //   console.log(this.state.search);
     // });
     this.props.setSearch(event.target.value);
-    // console.log(this.props.search);
+  }
+
+  nextClicked = () => {
+    this.setState((prevState) => {
+      return { page: prevState.page + 1 }
+    }, () => {
+      // console.log(this.state.page)
+      var index = this.state.page * 6;
+      const results = this.state.tracks.slice(index, index + 6);
+      console.log(results);
+    });
+    // console.log(this.props.page);
+    // this.props.setPage();
   }
 
   searchClicked = () => {
@@ -27,9 +42,15 @@ class SearchPage extends Component {
     // SCService.query(this.state.search)
     this.props.setHistory(this.props.search);
     SCService.query(this.props.search)
-      .then(function (tracks) {
-        const results = tracks.slice(0, 6);
-        console.log(results);
+      .then(tracks => {
+        this.setState({ tracks: tracks }, () => {
+          var index = this.state.page * 6;
+          // const results = tracks.slice(0, 6);
+          const results = this.state.tracks.slice(index, index + 6);
+          console.log(results);
+        });
+        // console.log(results[0].stream_url);
+        // SCService.play('http://soundcloud.com/forss/flickermood');
       });
   }
 
@@ -40,7 +61,8 @@ class SearchPage extends Component {
         <Search
           search={this.props.search}
           searchChange={this.searchChange}
-          searchClicked={this.searchClicked} />
+          searchClicked={this.searchClicked}
+          nextClicked={this.nextClicked} />
       </div>
     );
   }
@@ -51,6 +73,7 @@ const mapStateToProps = (state) => {
   return {
     search: state.search,
     history: state.history,
+    // page: state.page,
   }
 }
 
@@ -58,6 +81,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     setSearch: (value) => { dispatch(setSearch(value)) },
     setHistory: (value) => { dispatch(setHistory(value)) },
+    // setPage: () => { dispatch(setPage()) },
   }
 }
 
