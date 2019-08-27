@@ -1,6 +1,6 @@
 .Result {
   text-decoration: none;
-  background: lightgray;
+  background-color: white;
   border: 0.5px solid black;
   /* border-bottom: none; */
   border-top: none;
@@ -11,5 +11,5 @@
 }
 
 .Result:hover {
-  background: white;
+  background-color: lightgray;
 }
