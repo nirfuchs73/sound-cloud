@@ -1,6 +1,7 @@
 import {
   SET_SEARCH,
   SET_HISTORY,
+  SET_TRACKS,
   SET_CURRENT_TRACK_ID,
   // SET_PAGE,
 } from './constants';
@@ -8,6 +9,7 @@ import {
 const INITIAL_STATE = {
   search: '',
   history: [],
+  tracks: [],
   currentTrackID: 3474914,
   // page: 0,
 }
@@ -24,6 +26,9 @@ const reducer = (state = INITIAL_STATE, action) => {
       history.push(action.value);
       // return Object.assign({}, state, { history: [...state.history, action.value] });
       return Object.assign({}, state, { history: history });
+
+    case SET_TRACKS:
+      return Object.assign({}, state, { tracks: action.value });
 
     case SET_CURRENT_TRACK_ID:
       return Object.assign({}, state, { currentTrackID: action.value });

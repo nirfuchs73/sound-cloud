@@ -7,6 +7,7 @@ import Results from '../../components/Results/Results';
 import {
   setSearch,
   setHistory,
+  setTracks,
   setCurrentTrackID,
   // setPage,
 } from '../../store/actions';
@@ -15,7 +16,7 @@ import {
 class SearchPage extends Component {
   state = {
     // search: ''
-    tracks: [],
+    // tracks: [],
     page: 0,
     tracksToDisplay: [],
   }
@@ -33,7 +34,8 @@ class SearchPage extends Component {
     }, () => {
       // console.log(this.state.page)
       var index = this.state.page * 6;
-      const results = this.state.tracks.slice(index, index + 6);
+      // const results = this.state.tracks.slice(index, index + 6);
+      const results = this.props.tracks.slice(index, index + 6);
       this.setState({ tracksToDisplay: results }, () => {
         // console.log(this.state.tracksToDisplay);
       });
@@ -48,13 +50,15 @@ class SearchPage extends Component {
     this.props.setHistory(this.props.search);
     SCService.query(this.props.search)
       .then(tracks => {
-        this.setState({ tracks: tracks }, () => {
-          var index = this.state.page * 6;
-          const results = this.state.tracks.slice(index, index + 6);
-          this.setState({ tracksToDisplay: results }, () => {
-            // console.log(this.state.tracksToDisplay);
-          });
+        this.props.setTracks(tracks);
+        // this.setState({ tracks: tracks }, () => {
+        var index = this.state.page * 6;
+        // const results = this.state.tracks.slice(index, index + 6);
+        const results = this.props.tracks.slice(index, index + 6);
+        this.setState({ tracksToDisplay: results }, () => {
+          // console.log(this.state.tracksToDisplay);
         });
+        // });
       });
   }
 
@@ -86,6 +90,7 @@ const mapStateToProps = (state) => {
   return {
     search: state.search,
     history: state.history,
+    tracks: state.tracks,
     currentTrackID: state.currentTrackID,
     // page: state.page,
   }
@@ -95,6 +100,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     setSearch: (value) => { dispatch(setSearch(value)) },
     setHistory: (value) => { dispatch(setHistory(value)) },
+    setTracks: (value) => { dispatch(setTracks(value)) },
     setCurrentTrackID: (id) => { dispatch(setCurrentTrackID(id)) },
     // setPage: () => { dispatch(setPage()) },
   }
