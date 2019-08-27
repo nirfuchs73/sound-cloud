@@ -8,7 +8,7 @@ import {
 const INITIAL_STATE = {
   search: '',
   history: [],
-  currentTrackID: 0,
+  currentTrackID: 3474914,
   // page: 0,
 }
 
