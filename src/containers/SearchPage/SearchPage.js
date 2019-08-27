@@ -21,6 +21,12 @@ class SearchPage extends Component {
     tracksToDisplay: [],
   }
 
+  componentDidMount() {
+    var index = this.state.page * 6;
+    const results = this.props.tracks.slice(index, index + 6);
+    this.setState({ tracksToDisplay: results });
+  }
+
   searchChange = (event) => {
     // this.setState({ search: event.target.value }, () => {
     //   console.log(this.state.search);
