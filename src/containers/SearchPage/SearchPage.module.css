@@ -4,6 +4,11 @@
   margin: 10px;
   height: 31px;
   width: 50px;
+  font-weight: bold;
+}
+
+.NextBtn:hover {
+  cursor: pointer;
 }
 
 .Wrapper {

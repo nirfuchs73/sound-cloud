@@ -5,12 +5,14 @@
 .SearchInput {
   margin-left: 10px;
   height: 25px;
+  font-weight: bold;
 }
 
 .SearchBtn {
   margin-left: 10px;
   height: 31px;
   width: 50px;
+  font-weight: bold;
 }
 
 .SearchBtn:hover {
