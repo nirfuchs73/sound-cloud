@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, NavLink } from 'react-router-dom';
+import { Route, Switch, NavLink, Redirect } from 'react-router-dom';
 // import './App.css';
 import classes from './App.module.css';
 import store from './store';
@@ -22,8 +22,8 @@ function App() {
         <Route path='/play' render={(props) => <PlayPage store={store} {...props} />} />
         {/* <Route path="/history" component={HistoryPage} /> */}
         <Route path='/history' render={(props) => <HistoryPage store={store} {...props} />} />
-        <Route render={() => <h1>404 Error - Page Not found</h1>} />
-        {/* <Redirect from="/" to="/search" /> */}
+        {/* <Route render={() => <h1>404 Error - Page Not found</h1>} /> */}
+        <Redirect from="/" to="/search" />
       </Switch>
     </div>
   );
