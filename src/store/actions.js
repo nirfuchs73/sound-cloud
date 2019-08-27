@@ -1,6 +1,7 @@
 import {
   SET_SEARCH,
   SET_HISTORY,
+  SET_CURRENT_TRACK_ID,
   // SET_PAGE,
 } from './constants';
 
@@ -14,6 +15,13 @@ export function setSearch(value) {
 export function setHistory(value) {
   return {
     type: SET_HISTORY,
+    value
+  }
+}
+
+export function setCurrentTrackID(value) {
+  return {
+    type: SET_CURRENT_TRACK_ID,
     value
   }
 }

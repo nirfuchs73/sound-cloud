@@ -7,6 +7,7 @@ import Results from '../../components/Results/Results';
 import {
   setSearch,
   setHistory,
+  setCurrentTrackID,
   // setPage,
 } from '../../store/actions';
 
@@ -54,9 +55,11 @@ class SearchPage extends Component {
             // console.log(this.state.tracksToDisplay);
           });
         });
-        // console.log(results[0].stream_url);
-        // SCService.play('http://soundcloud.com/forss/flickermood');
       });
+  }
+
+  resultClicked = (id) => {
+    this.props.setCurrentTrackID(id);
   }
 
   render() {
@@ -68,8 +71,10 @@ class SearchPage extends Component {
           searchChange={this.searchChange}
           searchClicked={this.searchClicked}
           nextClicked={this.nextClicked} />
-        <Results tracksToDisplay={this.state.tracksToDisplay} />
-        {/* <iframe width="100%" height="166" scrolling="no" title="175288206" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/175288206&amp;color=0066cc"></iframe> */}
+        <Results
+          tracksToDisplay={this.state.tracksToDisplay}
+          resultClicked={this.resultClicked}
+        />
         <button onClick={this.nextClicked}>Next</button>
       </div>
     );
@@ -77,10 +82,11 @@ class SearchPage extends Component {
 }
 
 const mapStateToProps = (state) => {
-  // console.log('mapStateToProps', state);
+  console.log('mapStateToProps', state);
   return {
     search: state.search,
     history: state.history,
+    currentTrackID: state.currentTrackID,
     // page: state.page,
   }
 }
@@ -89,6 +95,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     setSearch: (value) => { dispatch(setSearch(value)) },
     setHistory: (value) => { dispatch(setHistory(value)) },
+    setCurrentTrackID: (id) => { dispatch(setCurrentTrackID(id)) },
     // setPage: () => { dispatch(setPage()) },
   }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Result from '../Result/Result';
 
@@ -6,15 +7,16 @@ const results = (props) => {
   console.log(props);
   let results = props.tracksToDisplay.map(result => {
     return (
-      // <Link to={'/posts/' + post.id} key={post.id}>
-      <Result
-        key={result.id}
-        title={result.title}
-      // clicked={() => this.postSelectedHandler(post.id)}
-      />
-      // </Link>);s
+      <Link to={'/play'} key={result.id}>
+        <Result
+          // key={result.id}
+          title={result.title}
+          resultClicked={() => props.resultClicked(result.id)}
+        />
+      </Link>
     );
   });
+
   return (
     <div>
       {results}

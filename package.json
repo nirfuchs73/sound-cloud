@@ -11,6 +11,7 @@
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
+    "react-soundcloud-embed": "^1.0.3",
     "redux": "^4.0.4",
     "soundcloud": "^3.3.2"
   },
