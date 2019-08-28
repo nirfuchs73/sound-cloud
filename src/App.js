@@ -11,9 +11,9 @@ function App() {
   return (
     <div className={classes.App}>
       <nav className={classes.Nav}>
-        <NavLink to="/search">Search</NavLink>
-        <NavLink to="/play">Play</NavLink>
-        <NavLink to="/history">History</NavLink>
+        <NavLink activeStyle={{ color: 'white' }} to="/search">Search</NavLink>
+        <NavLink activeStyle={{ color: 'white' }} to="/play">Play</NavLink>
+        <NavLink activeStyle={{ color: 'white' }} to="/history">History</NavLink>
       </nav>
       <Switch>
         <Route path="/search" component={SearchPage} />

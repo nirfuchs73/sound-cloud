@@ -20,7 +20,7 @@
   transition: 0.2s color;
 }
 
-.Nav a:hover, .Nav a:active, .Nav a.active {
+.Nav a:hover, .Nav a:active {
   color: white;
   /* text-decoration: underline; */
   font-weight: bold;
