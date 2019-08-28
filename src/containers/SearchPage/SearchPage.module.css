@@ -13,6 +13,7 @@
   height: 31px;
   width: 50px;
   font-weight: bold;
+  border-radius: 3px;
 }
 
 .NextBtn:hover {

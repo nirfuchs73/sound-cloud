@@ -9,6 +9,7 @@
   height: 25px;
   font-weight: bold;
   /* border: none; */
+  border-radius: 3px;
 }
 
 .SearchBtn {
@@ -18,6 +19,7 @@
   width: 50px;
   font-weight: bold;
   /* border: none; */
+  border-radius: 3px;
 }
 
 .SearchBtn:hover {
