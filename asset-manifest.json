@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/sound-cloud/static/css/main.0176d44f.chunk.css",
-    "main.js": "/sound-cloud/static/js/main.0b490680.chunk.js",
-    "main.js.map": "/sound-cloud/static/js/main.0b490680.chunk.js.map",
+    "main.css": "/sound-cloud/static/css/main.6adeb1d2.chunk.css",
+    "main.js": "/sound-cloud/static/js/main.05b6908b.chunk.js",
+    "main.js.map": "/sound-cloud/static/js/main.05b6908b.chunk.js.map",
     "runtime~main.js": "/sound-cloud/static/js/runtime~main.08035307.js",
     "runtime~main.js.map": "/sound-cloud/static/js/runtime~main.08035307.js.map",
     "static/js/2.3015ad59.chunk.js": "/sound-cloud/static/js/2.3015ad59.chunk.js",
     "static/js/2.3015ad59.chunk.js.map": "/sound-cloud/static/js/2.3015ad59.chunk.js.map",
     "index.html": "/sound-cloud/index.html",
-    "precache-manifest.bf1d42f6088f8a06d9a3e0c61d78a96b.js": "/sound-cloud/precache-manifest.bf1d42f6088f8a06d9a3e0c61d78a96b.js",
+    "precache-manifest.f5e534b6c16999950926fe432100f351.js": "/sound-cloud/precache-manifest.f5e534b6c16999950926fe432100f351.js",
     "service-worker.js": "/sound-cloud/service-worker.js",
-    "static/css/main.0176d44f.chunk.css.map": "/sound-cloud/static/css/main.0176d44f.chunk.css.map"
+    "static/css/main.6adeb1d2.chunk.css.map": "/sound-cloud/static/css/main.6adeb1d2.chunk.css.map"
   }
 }
