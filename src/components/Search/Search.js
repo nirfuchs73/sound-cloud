@@ -7,6 +7,7 @@ const search = (props) => (
     <input className={classes.SearchInput} type="text"
       value={props.search}
       onChange={props.searchChange}
+      onKeyPress={props.keyPressed}
       placeholder="Search tracks..." />
     <button className={classes.SearchBtn} onClick={props.searchClicked}>Go</button>
   </div>

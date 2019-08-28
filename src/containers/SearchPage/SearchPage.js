@@ -51,6 +51,12 @@ class SearchPage extends Component {
     });
   }
 
+  keyPressed = (target) => {
+    if (target.charCode === 13) {
+      this.searchClicked();
+    }
+  }
+
   searchClicked = () => {
     console.log('SearchClicked');
     this.props.setHistory(this.props.search);
@@ -73,7 +79,8 @@ class SearchPage extends Component {
           search={this.props.search}
           searchChange={this.searchChange}
           searchClicked={this.searchClicked}
-          nextClicked={this.nextClicked} />
+          nextClicked={this.nextClicked}
+          keyPressed={this.keyPressed} />
         <Results
           tracksToDisplay={this.state.tracksToDisplay}
           resultClicked={this.resultClicked}
