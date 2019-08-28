@@ -11,8 +11,8 @@ function App() {
   return (
     <div className={classes.App}>
       <nav className={classes.Nav}>
-        <NavLink to="/search">Search</NavLink> |&nbsp;
-        <NavLink to="/play">Play</NavLink> |&nbsp;
+        <NavLink to="/search">Search</NavLink>
+        <NavLink to="/play">Play</NavLink>
         <NavLink to="/history">History</NavLink>
       </nav>
       <Switch>

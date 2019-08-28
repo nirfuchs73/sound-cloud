@@ -8,7 +8,7 @@ class PlayPage extends Component {
   render() {
     return (
       <div className={classes.Wrapper}>
-        <h2 style={{ marginLeft: '10px' }}>Play Track</h2>
+        {/* <h2 style={{ marginLeft: '10px' }}>Play Track</h2> */}
         <Player id={this.props.currentTrackID} />
       </div>
     );

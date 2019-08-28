@@ -1,3 +1,11 @@
+.Wrapper {
+  max-width: 900px;
+  padding: 0 20px;
+  margin: 0 auto;
+  background-color: #B3D7F2;
+  height: 100vh;
+}
+
 .NextBtn {
   position: absolute;
   bottom: 0;
@@ -9,12 +17,5 @@
 
 .NextBtn:hover {
   cursor: pointer;
-}
-
-.Wrapper {
-  max-width: 900px;
-  padding: 0 20px;
-  margin: 0 auto;
-  background-color: #B3D7F2;
-  height: 100vh;
+  background-color: lightgrey;
 }

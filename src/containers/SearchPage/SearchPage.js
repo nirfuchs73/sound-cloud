@@ -74,7 +74,7 @@ class SearchPage extends Component {
   render() {
     return (
       <div className={classes.Wrapper}>
-        <h2 style={{ marginLeft: '10px' }}>Search for Tracks</h2>
+        {/* <h2 style={{ marginLeft: '10px' }}>Search for Tracks</h2> */}
         <Search
           search={this.props.search}
           searchChange={this.searchChange}

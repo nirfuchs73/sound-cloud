@@ -1,20 +1,26 @@
 .Search {
   margin-bottom: 2px;
+  padding-top: 20px;
 }
 
 .SearchInput {
+  /* margin-top: 10px; */
   margin-left: 10px;
   height: 25px;
   font-weight: bold;
+  /* border: none; */
 }
 
 .SearchBtn {
+  /* margin-top: 10px; */
   margin-left: 10px;
   height: 31px;
   width: 50px;
   font-weight: bold;
+  /* border: none; */
 }
 
 .SearchBtn:hover {
   cursor: pointer;
+  background-color:lightgray;
 }
