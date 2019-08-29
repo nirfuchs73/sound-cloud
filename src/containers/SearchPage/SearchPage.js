@@ -46,11 +46,25 @@ class SearchPage extends Component {
   }
 
   nextClicked = () => {
-    this.setState((prevState) => {
-      return { page: prevState.page + 1 }
-    }, () => {
-      this.setTracksToDisplay();
-    });
+    if (this.state.page < Math.floor(this.props.tracks.length / 6)) {
+      this.setState((prevState) => {
+        return { page: prevState.page + 1 }
+      }, () => {
+        this.setTracksToDisplay();
+        console.log(this.state.page);
+      });
+    }
+  }
+
+  prevClicked = () => {
+    if (this.state.page > 0) {
+      this.setState((prevState) => {
+        return { page: prevState.page - 1 }
+      }, () => {
+        this.setTracksToDisplay();
+        console.log(this.state.page);
+      });
+    }
   }
 
   listClicked = () => {
@@ -70,6 +84,7 @@ class SearchPage extends Component {
   searchClicked = () => {
     console.log('SearchClicked');
     this.props.setHistory(this.props.search);
+    this.setState({ page: 0 });
     SCService.query(this.props.search)
       .then(tracks => {
         this.props.setTracks(tracks);
@@ -90,6 +105,7 @@ class SearchPage extends Component {
           searchChange={this.searchChange}
           searchClicked={this.searchClicked}
           nextClicked={this.nextClicked}
+          prevClicked={this.prevClicked}
           listClicked={this.listClicked}
           tileClicked={this.tileClicked}
           keyPressed={this.keyPressed} />
