@@ -5,3 +5,7 @@
 .Results a {
   text-decoration: none;
 }
+
+.Results a:visited {
+  color: black;
+}

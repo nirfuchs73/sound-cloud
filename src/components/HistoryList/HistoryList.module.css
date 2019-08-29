@@ -5,3 +5,7 @@
 .HistoryList a {
   text-decoration: none;
 }
+
+.HistoryList a:visited {
+  color: black;
+}
