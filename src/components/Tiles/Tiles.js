@@ -12,6 +12,7 @@ const tiles = (props) => {
         <Tile
           // key={tile.id}
           title={tile.title}
+          image={tile.user.avatar_url}
           tileClicked={() => props.resultClicked(tile.id)}
         />
       </Link>
