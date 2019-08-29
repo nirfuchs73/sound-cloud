@@ -90,6 +90,8 @@ class SearchPage extends Component {
           searchChange={this.searchChange}
           searchClicked={this.searchClicked}
           nextClicked={this.nextClicked}
+          listClicked={this.listClicked}
+          tileClicked={this.tileClicked}
           keyPressed={this.keyPressed} />
         {this.state.display === 'list' && <Results
           tracksToDisplay={this.state.tracksToDisplay}
@@ -97,11 +99,6 @@ class SearchPage extends Component {
         {this.state.display === 'tile' && <Tiles
           tracksToDisplay={this.state.tracksToDisplay}
           resultClicked={this.resultClicked} />}
-        <div className={classes.Control}>
-          <button className={classes.ControlBtn} onClick={this.nextClicked}><i className="fas fa-step-forward"></i></button>
-          <button className={classes.ControlBtn} onClick={this.listClicked}><i className="fas fa-list"></i></button>
-          <button className={classes.ControlBtn} onClick={this.tileClicked}><i className="fas fa-th-large"></i></button>
-        </div>
       </div>
     );
   }
