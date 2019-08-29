@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/sound-cloud/precache-manifest.f9b99874f2864f0965d962e5b92c66a5.js"
+  "/sound-cloud/precache-manifest.a21d114fcbe9586492dfae1a7f03f85e.js"
 );
 
 self.addEventListener('message', (event) => {
