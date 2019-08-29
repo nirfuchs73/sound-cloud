@@ -7,9 +7,15 @@
   height: 100vh;
 }
 
-.NextBtn {
+.Control {
+  display: flex;
   position: absolute;
   bottom: 0;
+}
+
+.ControlBtn {
+  /* position: absolute; */
+  /* bottom: 0; */
   margin: 10px;
   height: 27px;
   width: 50px;
@@ -18,7 +24,7 @@
   border: 1px solid black;
 }
 
-.NextBtn:hover {
+.ControlBtn:hover {
   cursor: pointer;
   background-color: lightgrey;
 }

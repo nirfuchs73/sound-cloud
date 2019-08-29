@@ -1,0 +1,15 @@
+.Tile {
+  width: 250px;
+  padding: 16px;
+  height: 100px;
+  text-align: center;
+  border: 1px solid #eee;
+  transition: 0.2s background-color;
+  box-shadow: 0 2px 3px #ccc;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.Tile:hover, .Tile:active {
+  background-color: #C0DDF5;
+}

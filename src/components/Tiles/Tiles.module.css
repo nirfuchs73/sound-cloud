@@ -1,0 +1,16 @@
+.Tiles {
+  /* margin: 10px; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+}
+
+.Tiles a {
+  text-decoration: none;
+}
+
+.Tiles a:visited {
+  color: black;
+}

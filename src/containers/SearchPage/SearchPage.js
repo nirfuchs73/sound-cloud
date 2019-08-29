@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import SCService from '../../services/SCService';
 import Search from '../../components/Search/Search';
 import Results from '../../components/Results/Results';
+import Tiles from '../../components/Tiles/Tiles';
 
 import classes from './SearchPage.module.css';
 
@@ -21,6 +22,7 @@ class SearchPage extends Component {
     // tracks: [],
     page: 0,
     tracksToDisplay: [],
+    display: 'list',
   }
 
   componentDidMount() {
@@ -49,6 +51,14 @@ class SearchPage extends Component {
     }, () => {
       this.setTracksToDisplay();
     });
+  }
+
+  listClicked = () => {
+    this.setState({ display: 'list' });
+  }
+
+  tileClicked = () => {
+    this.setState({ display: 'tile' });
   }
 
   keyPressed = (target) => {
@@ -81,11 +91,17 @@ class SearchPage extends Component {
           searchClicked={this.searchClicked}
           nextClicked={this.nextClicked}
           keyPressed={this.keyPressed} />
-        <Results
+        {this.state.display === 'list' && <Results
           tracksToDisplay={this.state.tracksToDisplay}
-          resultClicked={this.resultClicked}
-        />
-        <button className={classes.NextBtn} onClick={this.nextClicked}>Next</button>
+          resultClicked={this.resultClicked} />}
+        {this.state.display === 'tile' && <Tiles
+          tracksToDisplay={this.state.tracksToDisplay}
+          resultClicked={this.resultClicked} />}
+        <div className={classes.Control}>
+          <button className={classes.ControlBtn} onClick={this.nextClicked}><i className="fas fa-step-forward"></i></button>
+          <button className={classes.ControlBtn} onClick={this.listClicked}><i className="fas fa-list"></i></button>
+          <button className={classes.ControlBtn} onClick={this.tileClicked}><i className="fas fa-th-large"></i></button>
+        </div>
       </div>
     );
   }
