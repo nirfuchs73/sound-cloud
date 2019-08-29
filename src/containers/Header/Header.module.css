@@ -1,0 +1,32 @@
+.Header {
+  display: flex;
+  /* justify-content: flex-start; */
+  align-items: center;
+  text-align: center;
+  max-width: 1140px;
+  padding: 0 0px;
+  margin: 0 auto;
+  /* background-color: #0078D4; */
+  background-color: #333333;
+  height: 50px;
+}
+
+.Header a {
+  height: 50px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  /* font-weight: bold; */
+  transition: 0.2s color;
+  /* background-color: black; */
+  background-color: #333333;
+  border-right: 1px solid #111111;
+}
+
+.Header a:hover, .Header a:active, .Header a:visited {
+  color: white;
+  /* text-decoration: underline; */
+  /* font-weight: bold; */
+}
