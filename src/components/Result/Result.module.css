@@ -22,3 +22,9 @@
 .Text {
   margin-left: 10px;
 }
+
+.Center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
