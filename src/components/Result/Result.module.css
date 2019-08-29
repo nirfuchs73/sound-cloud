@@ -1,4 +1,5 @@
 .Result {
+  display: flex;
   text-decoration: none;
   background-color: white;
   /* border: 0.5px solid black; */
@@ -16,4 +17,8 @@
 
 .Result:hover {
   background-color: #ccc;
+}
+
+.Text {
+  margin-left: 10px;
 }
