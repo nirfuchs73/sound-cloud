@@ -6,7 +6,7 @@
   background-color: white;
   transition: 0.2s background-color;
   box-shadow: 0 2px 3px #ccc;
-  margin: 5px;
+  margin: 5px 5px 5px 0;
   box-sizing: border-box;
 }
 

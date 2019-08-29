@@ -23,6 +23,7 @@
   /* background-color: black; */
   background-color: #333333;
   border-right: 1px solid #111111;
+  font-size: 0.9em;
 }
 
 .Header a:hover, .Header a:active, .Header a:visited {
