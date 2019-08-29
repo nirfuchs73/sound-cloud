@@ -8,8 +8,8 @@ const search = (props) => (
       value={props.search}
       onChange={props.searchChange}
       onKeyPress={props.keyPressed}
-      placeholder="Search tracks..." />
-    <button className={classes.SearchBtn} onClick={props.searchClicked}>Go</button>
+      placeholder="Search" />
+    <button className={classes.SearchBtn} onClick={props.searchClicked}><i className="fas fa-search"></i></button>
   </div>
 );
 
