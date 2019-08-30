@@ -11,7 +11,7 @@ import {
 class HistoryPage extends Component {
 
   historyItemClicked = (search) => {
-    console.log('historyItemClicked');
+    // console.log('historyItemClicked');
     this.props.setSearch(search);
   }
 

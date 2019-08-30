@@ -51,7 +51,7 @@ class SearchPage extends Component {
         return { page: prevState.page + 1 }
       }, () => {
         this.setTracksToDisplay();
-        console.log(this.state.page);
+        // console.log(this.state.page);
       });
     }
   }
@@ -62,7 +62,7 @@ class SearchPage extends Component {
         return { page: prevState.page - 1 }
       }, () => {
         this.setTracksToDisplay();
-        console.log(this.state.page);
+        // console.log(this.state.page);
       });
     }
   }
@@ -82,7 +82,7 @@ class SearchPage extends Component {
   }
 
   searchClicked = () => {
-    console.log('SearchClicked');
+    // console.log('SearchClicked');
     this.props.setHistory(this.props.search);
     this.setState({ page: 0 });
     SCService.query(this.props.search)
